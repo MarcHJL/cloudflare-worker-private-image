@@ -9,7 +9,7 @@
 	"compatibility_date": "2025-06-06",
 	"observability": {
 		"enabled": true
-	}
+	},
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -22,7 +22,18 @@
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
-
+	"r2_buckets": [
+		{
+			"binding": "R2_PRIVATE_IMAGES",
+			"bucket_name": "private-images"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "KV_IMAGE_UPLOAD",
+			"id": "image-upload"
+		}
+	]
 	/**
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
